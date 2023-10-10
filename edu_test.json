@@ -1,0 +1,42 @@
+[
+  {
+    "model": "education.course",
+    "pk": 1,
+    "fields": {
+      "title": "course1",
+      "description": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "education.course",
+    "pk": 2,
+    "fields": {
+      "title": "course2",
+      "description": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "education.lesson",
+    "pk": 1,
+    "fields": {
+      "title": "lesson 1_1",
+      "description": null,
+      "preview": "",
+      "video_url": null,
+      "course": 1
+    }
+  },
+  {
+    "model": "education.lesson",
+    "pk": 3,
+    "fields": {
+      "title": "lesson 1_2",
+      "description": null,
+      "preview": "",
+      "video_url": null,
+      "course": 1
+    }
+  }
+]

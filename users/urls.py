@@ -5,6 +5,7 @@ from users.views import UserViewSet
 
 app_name = UsersConfig.name
 
+
 router = routers.DefaultRouter()
 router.register(r'', UserViewSet, basename='users')
 
