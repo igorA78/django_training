@@ -5,7 +5,8 @@
     "fields": {
       "title": "course1",
       "description": null,
-      "preview": ""
+      "preview": "",
+      "owner": 3
     }
   },
   {
@@ -14,7 +15,8 @@
     "fields": {
       "title": "course2",
       "description": null,
-      "preview": ""
+      "preview": "",
+      "owner": 4
     }
   },
   {
@@ -25,18 +27,32 @@
       "description": null,
       "preview": "",
       "video_url": null,
-      "course": 1
+      "course": 1,
+      "owner": 3
+    }
+  },
+  {
+    "model": "education.lesson",
+    "pk": 2,
+    "fields": {
+      "title": "lesson 1_2",
+      "description": null,
+      "preview": "",
+      "video_url": null,
+      "course": 1,
+      "owner": 3
     }
   },
   {
     "model": "education.lesson",
     "pk": 3,
     "fields": {
-      "title": "lesson 1_2",
+      "title": "lesson 2_1",
       "description": null,
       "preview": "",
       "video_url": null,
-      "course": 1
+      "course": 2,
+      "owner": 4
     }
   }
 ]
