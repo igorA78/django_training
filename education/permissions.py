@@ -5,7 +5,7 @@ class EducationItemAccess(BasePermission):
     def has_permission(self, request, view):
         if request.method == 'GET':
             return request.user.is_authenticated
-        elif request.method == 'POST':
+        elif request.method in ['POST', 'DELETE']:
             return request.user.is_authenticated and not self.user_is_moderator(request)
         elif request.method in ['PUT', 'PATCH']:
             return True
