@@ -27,7 +27,6 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG') == 'True'
 
-
 ALLOWED_HOSTS = []
 
 
@@ -40,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf-yasg',
 
     'rest_framework',
     'django_filters',
@@ -95,6 +95,7 @@ DATABASES = {
         'PORT': os.getenv('DATABASE_PORT')
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -157,3 +158,6 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
 }
+
+
+STRIPE_API_KEY = os.getenv('STRIPE_API_KEY')

@@ -19,6 +19,7 @@ class Payment(models.Model):
     lesson = models.ForeignKey(Lesson, on_delete=models.SET_NULL, verbose_name='Оплаченный урок', **NULLABLE)
     amount = models.PositiveIntegerField(verbose_name='сумма оплаты')
     payment_type = models.CharField(choices=PAY_TYPES, default=PAY_CASH, max_length=10, verbose_name='Cпособ оплаты')
+    payment_stripe_id = models.CharField(max_length=255, verbose_name='id платежа', **NULLABLE)
 
     def __str__(self):
         return f'({self.user}) - {self.lesson if self.lesson else self.course} - {self.amount}'
