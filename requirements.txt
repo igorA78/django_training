@@ -9,3 +9,4 @@ djangorestframework
 drf-yasg
 pyyaml
 coreapi
+django_celery_beat

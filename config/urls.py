@@ -23,11 +23,6 @@ from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 from django.urls import include
 
-
-
-
-
-
 schema_view = get_schema_view(
     openapi.Info(
         title="API Documentation",
@@ -40,8 +35,6 @@ schema_view = get_schema_view(
     public=True,
     permission_classes=(permissions.AllowAny,),
 )
-
-
 
 
 urlpatterns = [

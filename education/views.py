@@ -4,6 +4,7 @@ from education.models import Course, Lesson
 from education.paginators import EducationPaginator
 from education.permissions import EducationItemAccess
 from education.serializers import CourseSerializer, LessonSerializer
+from .tasks import send_mail_for_update_course
 
 
 class CourseViewSet(viewsets.ModelViewSet):
@@ -12,7 +13,12 @@ class CourseViewSet(viewsets.ModelViewSet):
     pagination_class = EducationPaginator
 
     def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
+        new_course = serializer.save()
+        new_course.user = self.request.user
+        new_course.save()
+
+        if new_course:
+            send_mail_for_update_course.delay(course_id=new_course.course.id)
 
     def get_queryset(self):
         queryset = Course.objects.all()
