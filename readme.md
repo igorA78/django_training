@@ -42,6 +42,11 @@
 - Добавлены тесты для CRUD уроков, подписок
 
 - 26.1
- 26.2
-- 
+ 26.2 
+27.2
+- Добавлены файлы: Dockerfile, docker-compose.yaml
+Сборка образов : docker-compose build
+Запуск контейнеров : docker-compose up 
+Остановка контейнеров : docker-compose down
+
 
